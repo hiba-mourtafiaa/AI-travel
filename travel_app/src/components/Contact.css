@@ -1,0 +1,297 @@
+/* Container Outer Wrapping Bounds - Exact match to Dashboard & About layout footprints */
+.contact-view-wrapper {
+  max-width: 1240px;
+  margin: 6rem auto 6rem auto; /* Shared layout header clearance boundary line */
+  padding: 0 2rem;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle, unified ambient gold background accent aura */
+.contact-view-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 350px;
+  background: radial-gradient(circle, rgba(223, 177, 91, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Translucent Background Typography Watermark Grid */
+.contact-bg-watermark {
+  position: absolute;
+  top: -2%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14vw;
+  font-weight: 900;
+  color: rgba(5, 11, 20, 0.02);
+  letter-spacing: 0.5rem;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Two-Column Form Split Grid Alignment Geometry */
+.contact-content-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 968px) {
+  .contact-content-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Left Typography Stack Layout Mapping - Identical text rules as About.css */
+.contact-info-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-pre-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #dfb15b; /* Signature gold accent pre-title label */
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.contact-main-heading {
+  font-family: "Playfair Display", "Merriweather", Georgia, serif; /* Match elegant serif style of About page */
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #050b14; /* Midnight dark */
+  line-height: 1.15;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.contact-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 3rem 0;
+  max-width: 480px;
+}
+
+/* Content Information Panels - Matches Dashboard Metrics Card Layout */
+.contact-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-info-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 20px; /* Matched 20px curves across dashboard card configurations */
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+}
+
+.contact-info-card:not(.static-card):hover {
+  background: #f8fafc;
+  border-color: #dfb15b;
+  transform: translateX(4px);
+}
+
+.card-left-section {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.icon-wrapper {
+  width: 44px;
+  height: 44px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #050b14;
+  font-size: 1.1rem;
+}
+
+.card-text-metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-label {
+  color: #050b14;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.card-detail {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.card-arrow-icon {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.contact-info-card:hover .card-arrow-icon {
+  color: #dfb15b;
+  transform: translate(2px, -2px);
+}
+
+/* Form Window Panel Box Styling Rules */
+.contact-form-column {
+  display: flex;
+  align-items: center;
+}
+
+.contact-unified-form {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 2.5rem;
+  border-radius: 24px; /* Matches layout empty-state boxes radii */
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 10px 30px rgba(5, 11, 20, 0.03);
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  font-size: 0.95rem;
+  color: #050b14;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: #dfb15b;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(223, 177, 91, 0.08);
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-textarea {
+  resize: none;
+}
+
+/* Primary Form Submit Processing Action Button */
+.form-submit-btn {
+  width: 100%;
+  background-color: #050b14; /* Shared primary block dark fill button type */
+  color: #ffffff;
+  border: none;
+  padding: 1.1rem;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.form-submit-btn:hover {
+  background-color: #dfb15b; /* Transitions smoothly to gold highlights when hovered */
+  color: #050b14;
+  transform: translateY(-1px);
+}
+
+.form-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Custom Content Success Screen Card Layout */
+.contact-success-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 3.5rem 2.5rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(5, 11, 20, 0.03);
+  animation: fadeInForm 0.4s ease forwards;
+}
+
+.success-check-icon {
+  font-size: 3.5rem;
+  color: #dfb15b; /* Signature gold color rule */
+  margin-bottom: 1.5rem;
+}
+
+.contact-success-card h2 {
+  font-family: "Playfair Display", "Merriweather", Georgia, serif;
+  font-size: 2rem;
+  color: #050b14;
+  margin: 0 0 1rem 0;
+}
+
+.contact-success-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0 0 2rem 0;
+  max-width: 340px;
+}
+
+.form-reset-btn {
+  background: none;
+  border: none;
+  color: #050b14;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.form-reset-btn:hover {
+  color: #dfb15b;
+}
+
+.contact-error-text {
+  color: #ef4444;
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+@keyframes fadeInForm {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
